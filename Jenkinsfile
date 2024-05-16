@@ -12,15 +12,9 @@ pipeline {
         stage('Run Docker Compose') {
             steps {
                 // Run Docker Compose up to start services
-                sh 'sudo docker build -t react-app-image .'
+                sh 'docker build -t react-app-image .'
             }
         }
     }
 
-    post {
-        always {
-            // Clean up services by stopping and removing containers
-            sh 'docker-compose down'
-        }
-    }
 }
