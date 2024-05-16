@@ -20,4 +20,6 @@ WORKDIR /app
 RUN npm install
 RUN npm install -g react-scripts
 
-CMD echo 'Image Builded - docker-react'
+EXPOSE 3000
+
+CMD ["npm", "run", "start"]
