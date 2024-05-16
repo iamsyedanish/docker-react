@@ -12,7 +12,7 @@ pipeline {
         stage('Run Docker Compose') {
             steps {
                 // Run Docker Compose up to start services
-                sh 'docker-compose up'
+                sh 'docker build -t react-app-image .'
             }
         }
     }
